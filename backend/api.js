@@ -15,7 +15,13 @@ app.use((req, res, next) => {
 })
 
 app.get("/api/ships", (req, res) => {
-    res.json(ships)
+    const limit = Number.parseInt(req.query.limit) || 5
+    const offset = Number.parseInt(req.query.offset) || 0
+
+    res.json({
+        total: ships.length,
+        results: ships.slice(offset, offset + limit)
+    })
 })
 
 app.get("/api/user", (req, res) => {

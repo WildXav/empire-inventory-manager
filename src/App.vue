@@ -3,13 +3,17 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue';
 import HeaderBar from "./components/HeaderBar.vue"
-import {onMounted, reactive, ref} from "vue"
+import {onMounted, ref} from "vue"
 import {User} from "./api/interfaces/user"
 import usersApi from "./api/users"
+import ShipsTable from "./components/ShipsTable.vue";
+import {useShipsStore} from "./stores/ships-store";
 
 let user = ref<User | null>(null)
+const store = useShipsStore()
 
 onMounted(async () => {
+  store.fetchShips()
   user.value = await usersApi.fetchUserProfile()
 })
 </script>
@@ -22,7 +26,7 @@ onMounted(async () => {
           <HeaderBar :user="user"/>
         </el-header>
         <el-main>
-          <el-text class="mx-1" size="large">Large</el-text>
+          <ShipsTable/>
         </el-main>
       </el-container>
     </el-container>
@@ -54,5 +58,9 @@ body,
   > .el-container {
     height: 100%;
   }
+}
+
+.el-loading-mask {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 </style>

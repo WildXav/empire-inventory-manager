@@ -137,7 +137,7 @@ const ships = [
   {
     id: 16,
     type: "LIGHT_FREIGHTER",
-    manufacturer: "Manufacturer Corellian Engineering Corporation",
+    manufacturer: "Corellian Engineering Corporation",
     model: "YT-2400",
     cost: "130000",
     qty_left_pct: "58",

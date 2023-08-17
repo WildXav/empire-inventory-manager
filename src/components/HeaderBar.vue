@@ -21,7 +21,7 @@ defineProps<{ user: User | null }>()
     <el-menu-item index="1" disabled>Equipment</el-menu-item>
 
     <div class="user-area">
-      <el-menu-item v-loading="!user" element-loading-background="rgba(0,0,0,0)">
+      <el-menu-item v-loading="!user" element-loading-background="transparent">
         <template v-if="user">
           <el-text type="primary" tag="b">
             <el-text class="user-title" type="info" tag="sup">{{ user.designation }}</el-text>
