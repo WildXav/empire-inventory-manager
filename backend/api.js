@@ -4,6 +4,16 @@ import user from "./user";
 
 const app = express()
 
+app.use((req, res, next) => {
+    if (req.path.startsWith('/api')) {
+        setTimeout(() => {
+            next()
+        }, 1500)
+    } else {
+        next()
+    }
+})
+
 app.get("/api/ships", (req, res) => {
     res.json(ships)
 })

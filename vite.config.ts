@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [
         vue(),
         mix({
-            handler: './src-api/api.js',
+            handler: './backend/api.js',
         }),
     ],
     server: {

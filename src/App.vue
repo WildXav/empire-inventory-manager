@@ -2,6 +2,16 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue';
+import HeaderBar from "./components/HeaderBar.vue"
+import {onMounted, reactive, ref} from "vue"
+import {User} from "./api/interfaces/user"
+import usersApi from "./api/users"
+
+let user = ref<User | null>(null)
+
+onMounted(async () => {
+  user.value = await usersApi.fetchUserProfile()
+})
 </script>
 
 <template>
@@ -9,31 +19,7 @@ import HelloWorld from './components/HelloWorld.vue';
     <el-container>
       <el-container>
         <el-header>
-          <el-menu default-active="0" mode="horizontal" :ellipsis="false">
-            <el-menu-item>
-              <div class="app-title">
-                <v-icon name="fa-empire" scale="2"/>
-                <div>
-                  <span>Imperial Navy</span>
-                  <span>Resource Manager</span>
-                </div>
-              </div>
-            </el-menu-item>
-            <el-menu-item index="0">Starships</el-menu-item>
-            <el-menu-item index="1" disabled>Personnel</el-menu-item>
-            <el-menu-item index="1" disabled>Droids</el-menu-item>
-            <el-menu-item index="1" disabled>Equipment</el-menu-item>
-
-            <div class="user-area">
-              <el-menu-item>
-                <el-text type="primary" tag="b">
-                  <el-text class="user-title" type="info" tag="sup">TK-4601</el-text>
-                  Tarvyn Lareka
-                </el-text>
-                <el-avatar src="/avatar.png" shape="square" :size="45"/>
-              </el-menu-item>
-            </div>
-          </el-menu>
+          <HeaderBar :user="user"/>
         </el-header>
         <el-main>
           <el-text class="mx-1" size="large">Large</el-text>
@@ -67,37 +53,6 @@ body,
   &,
   > .el-container {
     height: 100%;
-  }
-
-  .app-title {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    height: 55px;
-
-    > div {
-      display: flex;
-      flex-direction: column;
-      margin-left: .5rem;
-
-      span {
-        line-height: 1.5;
-      }
-    }
-  }
-
-  .user-area {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-
-    .user-title {
-      font-size: 10px;
-    }
-
-    .el-avatar {
-      margin-left: 1rem;
-    }
   }
 }
 </style>
