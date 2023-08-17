@@ -13,13 +13,16 @@ import HelloWorld from './components/HelloWorld.vue';
             <el-menu-item>
               <div class="app-title">
                 <v-icon name="fa-empire" scale="2"/>
-                <span>Inventory Manager</span>
+                <div>
+                  <span>Imperial Navy</span>
+                  <span>Resource Manager</span>
+                </div>
               </div>
             </el-menu-item>
-            <el-menu-item index="0">Spaceships</el-menu-item>
-            <el-menu-item index="1" disabled>Troops</el-menu-item>
-            <el-menu-item index="3" disabled>Droids</el-menu-item>
-            <el-menu-item index="4" disabled>Arsenal</el-menu-item>
+            <el-menu-item index="0">Starships</el-menu-item>
+            <el-menu-item index="1" disabled>Personnel</el-menu-item>
+            <el-menu-item index="1" disabled>Droids</el-menu-item>
+            <el-menu-item index="1" disabled>Equipment</el-menu-item>
 
             <div class="user-area">
               <el-menu-item>
@@ -70,9 +73,16 @@ body,
     display: flex;
     align-items: center;
     font-weight: bold;
+    height: 55px;
 
-    span {
+    > div {
+      display: flex;
+      flex-direction: column;
       margin-left: .5rem;
+
+      span {
+        line-height: 1.5;
+      }
     }
   }
 

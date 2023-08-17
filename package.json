@@ -8,15 +8,18 @@
   },
   "dependencies": {
     "element-plus": "^2.3.9",
+    "express": "^4.18.2",
     "oh-vue-icons": "^1.0.0-rc3",
+    "pinia": "^2.1.6",
     "sass": "^1.65.1",
     "vue": "^3.2.6"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.6.1",
+    "@vitejs/plugin-vue": "^3.2.0",
     "@vue/compiler-sfc": "^3.2.6",
     "typescript": "^4.3.2",
-    "vite": "^2.5.4",
+    "vite": "^3.2.7",
+    "vite-plugin-mix": "^0.4.0",
     "vue-tsc": "^0.2.2"
   }
 }
