@@ -1,11 +1,26 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 Coding Test
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+The Galactic Empire's Imperial Navy needs you!
+Their most essential app, the Resource Manager, is currently unstable.
 
-## Recommended IDE Setup
+### Your Mission: Make It More Stable, You Must!
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Tasks
+#### The following are the changes that needs to be implemented:
 
-## Type Support For `.vue` Imports in TS
+- **_Feature_**: Right now all the ships types are displayed in blue inside the `ShipsTable`. Our troops would love to be able to differentiate them in a blink of an eye.
+<br>_Ex: "Star Fighter" => Red color / "Star Destroyer" => Green color / etc.._
+- **_Feature_**: The `ShipsTable` currently uses the default sorting method defined by the backend (which is using the id field).
+<br>We want the table to be, by default, sorted by Model name in ascending order!
+- **_Bugfix_**: The pagination is somehow not working! There is no errors but it doesn't reload the data.
+<br>Please fix it, we need to browser the next pages of ships!
+- **_Refactoring_**: Currently the `App` component is retrieving the user data and it passes them to the `HeaderBar` input.
+<br>We would prefer if a new Pinia store would be created to store, access and fetch the user data. Similar to the `ShipsStore`.
+- **_Refactoring_**: We aren't sure what's the point of the `ShipTagsPicker`. Could you make it so we don't need it anymore?
+<br> Basically move the logic to it's parent, the `EditShipDrawer` component.
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+<br>
+Please be cautious around the refactoring, don't create new bugs please.
+<br>We don't want **Vador**, or worse, **Sidious** to know about all this!
+
+### May the Dark Side of the Force be with you!.
