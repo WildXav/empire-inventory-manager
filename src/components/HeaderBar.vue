@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {User} from "../api/interfaces/user";
+import {User} from "../api/interfaces/user"
 
 defineProps<{ user: User | null }>()
 </script>

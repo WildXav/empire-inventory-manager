@@ -5,8 +5,9 @@ import HeaderBar from "./components/HeaderBar.vue"
 import {onMounted, ref} from "vue"
 import {User} from "./api/interfaces/user"
 import usersApi from "./api/users"
-import ShipsTable from "./components/ShipsTable.vue";
-import {useShipsStore} from "./stores/ships-store";
+import ShipsTable from "./components/ShipsTable.vue"
+import {useShipsStore} from "./stores/ships-store"
+import AddShipDrawer from './components/EditShipDrawer.vue'
 
 let user = ref<User | null>(null)
 const store = useShipsStore()
@@ -26,6 +27,7 @@ onMounted(async () => {
         </el-header>
         <el-main>
           <ShipsTable/>
+          <AddShipDrawer/>
         </el-main>
       </el-container>
     </el-container>

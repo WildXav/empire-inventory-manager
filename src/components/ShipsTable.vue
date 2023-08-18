@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import {useShipsStore} from "../stores/ships-store";
-import {computed, ref} from "vue";
-import { SortOrder } from '../api/common';
-import { Column } from 'element-plus';
+import {useShipsStore} from "../stores/ships-store"
+import {computed, ref} from "vue"
+import { Column } from 'element-plus'
+import { formatTagLabel } from '../utils'
 
 const store = useShipsStore()
 const ships = computed(() => store.shipSearchResponse.results)
 const currentPage = ref(1)
 
-const formatShipType = (type: string): string => {
-  return type.toLowerCase().replace('_', ' ')
-}
-
 const onSortChange = (column: Column): void => {
-  store.updateSearchQuery({
+  store.shipSearchQuery = {
     ...store.shipSearchQuery,
     sortProp: column.prop,
     sortOrder: column.order
-  })
+  }
 }
 </script>
 
@@ -40,7 +36,7 @@ const onSortChange = (column: Column): void => {
 
       <el-table-column prop="type" label="Type" sortable="custom">
         <template #default="{ row }">
-          <el-tag class="ship-type">{{ formatShipType(row.type) }}</el-tag>
+          <el-tag class="tag-label">{{ formatTagLabel(row.type) }}</el-tag>
         </template>
       </el-table-column>
 
@@ -59,9 +55,22 @@ const onSortChange = (column: Column): void => {
 
       <el-table-column prop="manufacturer" label="Manufacturer" sortable="custom"/>
 
-      <el-table-column align="right" width="120px">
-        <template #header>
-          <el-button type="primary">Add Ship</el-button>
+      <el-table-column label="Tags">
+        <template #default="{ row }">
+          <template v-if="row.tags.length">
+            <el-tag v-for="tag in row.tags" :key="tag" class="tag-label">
+              {{ formatTagLabel(tag) }}
+            </el-tag>
+          </template>
+          <span v-else>N/A</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="right" width="100px">
+        <template #default="{ row }">
+          <el-button size="small" @click="store.editDrawerShipData = row">
+            Edit
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -80,7 +89,7 @@ const onSortChange = (column: Column): void => {
     justify-content: center;
   }
 
-  .ship-type {
+  .tag-label {
     text-transform: capitalize;
   }
 

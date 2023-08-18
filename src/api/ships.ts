@@ -1,11 +1,11 @@
-import {BASE_API_PATH, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse} from "./common";
-import {Ship} from "./interfaces/ship";
-import axios from "axios";
+import {BASE_API_PATH, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse} from "./common"
+import {Ship} from "./interfaces/ship"
+import axios from "axios"
 
 const baseUrl = `${BASE_API_PATH}/ships`
 
 const fetchShips = async (query: SearchQuery): Promise<SearchResponse<Ship>> => {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams()
     params.append('offset', query.offset.toString())
     params.append('limit', query.limit.toString())
 
@@ -23,6 +23,19 @@ const fetchShips = async (query: SearchQuery): Promise<SearchResponse<Ship>> => 
     }
 }
 
+const updateShip = async (updatedShip: Ship): Promise<Ship | null> => {
+    const url = `${baseUrl}/${updatedShip.id}`
+
+    try {
+        const resp = await axios.put<Ship>(url, updatedShip)
+        return resp.data
+    } catch (error) {
+        console.error(error)
+        return null
+    }
+}
+
 export default {
-    fetchShips
+    fetchShips,
+    updateShip
 }

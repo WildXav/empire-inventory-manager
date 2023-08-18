@@ -1,11 +1,12 @@
 export interface Ship {
     id: number
     type: ShipType
-    manufacturer: number
+    manufacturer: string
     model: string
-    cost: number
-    qty_left_pct: number
+    cost: string
+    qty_left_pct: string
     pic_url: string
+    tags: ShipTag[]
 }
 
 export enum ShipType {
@@ -20,4 +21,12 @@ export enum ShipType {
     Battlecruiser = 'BATTLECRUISER',
     HeavyStarCruiser = 'HEAVY_STAR_CRUISER',
     Gunship = 'GUNSHIP',
+}
+
+export enum ShipTag {
+    Discontinued = 'DISCONTINUED',
+    Compromised = 'COMPROMISED',
+    NeedStockIncrease = 'STOCK_INCREASE_NEEDED',
+    NeedImprovedVersion = 'NEED_IMPROVED_VERSION',
+    ToDiscontinue = 'TO_DISCONTINUE'
 }

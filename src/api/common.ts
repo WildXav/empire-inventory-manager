@@ -1,4 +1,4 @@
-import { Ship } from './interfaces/ship';
+import { Ship } from './interfaces/ship'
 
 const BASE_API_PATH = '/api'
 

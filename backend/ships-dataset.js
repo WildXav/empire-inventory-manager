@@ -6,7 +6,8 @@ const ships = [
     model: "TIE/Ln Starfighter",
     cost: "60000",
     qty_left_pct: "20",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/92/TIEfighter2-Fathead.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/92/TIEfighter2-Fathead.png",
+    tags: []
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const ships = [
     model: "Imperial I-class",
     cost: "150000000",
     qty_left_pct: "60",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/9b/StarDestroyer_negvv.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/9b/StarDestroyer_negvv.png",
+    tags: []
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const ships = [
     model: "Interdictor-class",
     cost: "200000000",
     qty_left_pct: "80",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/e/e2/InterdictorClassSD-EGTW.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/e/e2/InterdictorClassSD-EGTW.png",
+    tags: []
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const ships = [
     model: "Delta-class T-3c",
     cost: "160000",
     qty_left_pct: "40",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fd/Krennics-Shuttle-SWCT.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fd/Krennics-Shuttle-SWCT.png",
+    tags: []
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const ships = [
     model: "Kappa-class",
     cost: "100000",
     qty_left_pct: "40",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/f4/KappaClassShuttle-DA.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/f4/KappaClassShuttle-DA.png",
+    tags: []
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const ships = [
     model: "GR-75",
     cost: "350000",
     qty_left_pct: "25",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/4/44/GR-75MediumTransport-100Scenes.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/4/44/GR-75MediumTransport-100Scenes.png",
+    tags: []
   },
   {
     id: 7,
@@ -60,7 +66,8 @@ const ships = [
     model: "Arquitens-class",
     cost: "5000000",
     qty_left_pct: "80",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/c/ca/SWBII-ImperialCruiser.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/c/ca/SWBII-ImperialCruiser.png",
+    tags: []
   },
   {
     id: 8,
@@ -69,7 +76,8 @@ const ships = [
     model: "Sentinel-class",
     cost: "240000",
     qty_left_pct: "5",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/6/6e/Sentinel_negvv.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/6/6e/Sentinel_negvv.png",
+    tags: []
   },
   {
     id: 9,
@@ -78,7 +86,8 @@ const ships = [
     model: "Lambda-class T-4a",
     cost: "140000",
     qty_left_pct: "55",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/6/6d/LambdaShuttle-Fathead.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/6/6d/LambdaShuttle-Fathead.png",
+    tags: []
   },
   {
     id: 10,
@@ -87,7 +96,8 @@ const ships = [
     model: "Marauder-class",
     cost: "1000000",
     qty_left_pct: "13",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fa/MarauderclassCorvette-SofG2007.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fa/MarauderclassCorvette-SofG2007.png",
+    tags: []
   },
   {
     id: 11,
@@ -96,7 +106,8 @@ const ships = [
     model: "T-5 Deliverance",
     cost: "150000",
     qty_left_pct: "70",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/8/89/T-5_Deliverance-SWC.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/8/89/T-5_Deliverance-SWC.png",
+    tags: []
   },
   {
     id: 12,
@@ -105,7 +116,8 @@ const ships = [
     model: "TIE Boarding Craft",
     cost: "150000",
     qty_left_pct: "64",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/9b/TIEBoardingCraft-Fathead.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/9/9b/TIEBoardingCraft-Fathead.png",
+    tags: []
   },
   {
     id: 13,
@@ -114,7 +126,8 @@ const ships = [
     model: "TIE/sh",
     cost: "150000",
     qty_left_pct: "85",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fe/TIECommandShuttle-TFOWM.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/f/fe/TIECommandShuttle-TFOWM.png",
+    tags: []
   },
   {
     id: 14,
@@ -123,7 +136,8 @@ const ships = [
     model: "Raider-class",
     cost: "3000000",
     qty_left_pct: "78",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/e/e0/Raider-class_corvette_XWM.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/e/e0/Raider-class_corvette_XWM.png",
+    tags: []
   },
   {
     id: 15,
@@ -132,7 +146,8 @@ const ships = [
     model: "Zeta-class",
     cost: "95000",
     qty_left_pct: "20",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/8/82/Zeta-class_shuttle_ROUVG.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/8/82/Zeta-class_shuttle_ROUVG.png",
+    tags: []
   },
   {
     id: 16,
@@ -141,7 +156,8 @@ const ships = [
     model: "YT-2400",
     cost: "130000",
     qty_left_pct: "58",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/0/08/YT-2400-SWESV.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/0/08/YT-2400-SWESV.png",
+    tags: []
   },
   {
     id: 17,
@@ -150,7 +166,8 @@ const ships = [
     model: "Praetor Mark II-class",
     cost: "700000000",
     qty_left_pct: "73",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/a/aa/PraetorMarkIIclassBattlecruiser-EGTW.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/a/aa/PraetorMarkIIclassBattlecruiser-EGTW.png",
+    tags: []
   },
   {
     id: 18,
@@ -159,7 +176,8 @@ const ships = [
     model: "MC80A Home One Type",
     cost: "112000000",
     qty_left_pct: "84",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/7/73/MonCalamariCruiser-TSWB.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/7/73/MonCalamariCruiser-TSWB.png",
+    tags: []
   },
   {
     id: 19,
@@ -168,7 +186,8 @@ const ships = [
     model: "LAAT",
     cost: "62000",
     qty_left_pct: "38",
-    pic_url: "https://static.wikia.nocookie.net/starwars/images/1/16/Republic-police-gunship_detail.png"
+    pic_url: "https://static.wikia.nocookie.net/starwars/images/1/16/Republic-police-gunship_detail.png",
+    tags: []
   }
 ]
 
