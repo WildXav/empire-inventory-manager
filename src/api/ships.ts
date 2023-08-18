@@ -9,6 +9,11 @@ const fetchShips = async (query: SearchQuery): Promise<SearchResponse<Ship>> => 
     params.append('offset', query.offset.toString())
     params.append('limit', query.limit.toString())
 
+    if (query.sortProp && query.sortOrder) {
+        params.append('sort_prop', query.sortProp)
+        params.append('sort_order', query.sortOrder)
+    }
+
     try {
         const resp = await axios.get<SearchResponse<Ship>>(baseUrl, {params})
         return resp.data
