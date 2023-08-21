@@ -3,7 +3,7 @@
 The Galactic Empire's Imperial Navy needs you!
 Their most essential app, the Resource Manager, is currently unstable.
 
-### Your Mission: Make It More Stable, You Must!
+### Your Mission: Improve it, You Must!
 
 ## Tasks
 #### The following are the changes that needs to be implemented:
@@ -31,7 +31,7 @@ Please be cautious around the refactoring, don't create new bugs please.
 We don't want **Vador**, or worse, **Sidious** to know about all this!
 ###
 Also if you have questions regarding one of the components prefixed by `el-`, as in `el-table-` or `el-tag`,
-you must know that those components are coming from the Element UI library.
-<br>It's documentation is here: https://element-plus.org/en-US/component/button.html
+you must know that those components are coming from the Element Plus UI library.
+<br>It's documentation is here: [Element Plus Documentation](https://element-plus.org/en-US/component/button.html).
 
 ### May the Dark Side of the Force be with you!.
