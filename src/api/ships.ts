@@ -1,4 +1,4 @@
-import {BASE_API_PATH, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse} from "./common"
+import {BASE_API_PATH, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse} from "./interfaces/common"
 import {Ship} from "./interfaces/ship"
 import axios from "axios"
 

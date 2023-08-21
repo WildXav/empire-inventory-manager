@@ -1,6 +1,6 @@
 import {User} from "./interfaces/user"
 import axios from "axios"
-import {BASE_API_PATH} from "./common"
+import {BASE_API_PATH} from "./interfaces/common"
 
 const baseUrl = `${BASE_API_PATH}/user`
 

@@ -1,4 +1,4 @@
-import { EMPTY_SEARCH_QUERY, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse, SortOrder } from '../api/common'
+import { EMPTY_SEARCH_QUERY, EMPTY_SEARCH_RESPONSE, SearchQuery, SearchResponse, SortOrder } from '../api/interfaces/common'
 import { Ship } from '../api/interfaces/ship'
 import { ref, Ref, watch } from 'vue'
 import { defineStore } from 'pinia'
